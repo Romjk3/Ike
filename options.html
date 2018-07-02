@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Опции</title>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="options.js"></script>
+  <style>
+    body {
+      background-color:  #FFFAFA; 
+      width: 500px;
+      height: 500px;
+    }
+    p {
+      font: Arial;
+      font-size: 16px;
+      color: #F8F8FF;
+      text-align: center;
+      font-style: bold;
+    }
+    .site{
+      font: Arial;
+      font-size: 10px;
+      color: #F8F8FF;
+      text-align: left;
+    }
+    .group {
+      overflow: auto; /* Добавляем полосы прокрутки */
+      width: 49.6%; /* Ширина блока */
+      height: 50%; /* Высота блока */
+      border: solid 1px black; /* Параметры рамки */
+    } 
+    #urgent_important {
+      background-color: #FF5C00;
+      float: left;
+        }
+    #not_important {
+      background-color: #FFC600;
+      float: right;
+        }
+    #urgent_not {
+      background-color: #2618B7;
+      float: left;
+        }
+    #not_not {
+      background-color: #00AD7D;
+      float: right;
+        }
+  </style>
+ </head>
+ <body>
+    <div id="urgent_important" class="group">
+      <p>Важные-Срочные:</p>
+      <ul id="list_ui"></ul>
+    </div>
+    <div id="not_important" class="group">
+      <p>Важные-Несрочные:</p>
+      <ul id="list_ni"></ul>
+     </div>
+    <div id="urgent_not" class="group">
+      <p>Неважные-Срочные:</p>
+      <ul id="list_un"></ul>
+     </div>
+    <div id="not_not" class="group">
+      <p>Неважные-Несрочные</p>
+      <ul id="list_nn"></ul>
+    </div>
+    <div id="select">
+    <input id="input1" name="site" disabled>
+    <select id="select" name="group">
+     <option value="1" selected>Важные-Срочные</option>
+     <option value="2" >Важные-Несрочные</option>
+     <option value="3" >Неважные-Срочные</option>
+     <option value="4" >Неважные-Несрочные</option>
+    </select>
+    <input id="but1" type="button" value="Добавить"/>
+    <form action="/popup.html" float="right">
+    <button type="submit">Вернуться</button>
+    </form>
+    </div>
+ </body>
+</html>

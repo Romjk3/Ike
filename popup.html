@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<nead>
+	<meta charset="utf-8">
+	<title>Popup</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+    <style>
+        body {
+            background-color:  #FFFAFA; 
+            width: 500px;
+            height: 500px;
+        }
+        .text {
+            font: Arial;
+            font-size: 16px;
+            color: black;
+            text-align: center;
+        }
+        #diagram{
+            width: 400px;
+            height: 400px;
+        }
+        #group_0 {
+            background-color: #FF5C00;
+            position: absolute;
+        }
+        #group_1 {
+            background-color: #2618B7;
+            position: absolute;
+        }
+        #group_2 {
+            background-color: #FFC600;
+            position: absolute;
+        }
+        #group_3 {
+            background-color: #00AD7D;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="diagram"></div>
+    <div id="information"></div>
+    <form action="/options.html">
+    <button type="submit">Настройки</button>
+    </form>
+</body>
+</html>
